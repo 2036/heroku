@@ -9,8 +9,8 @@ cat << EOF > /usr/local/etc/caddy/caddy.json
             "settings": {
                 "clients": [
                     {
-                        "id": "$UUID",
-                        "alterId": 64
+                        "id": "fae1701e-ee35-4a95-bc66-2bebf9a63944",
+                        "alterId": 4
                     }
                 ],
                 "disableInsecureEncryption": true
