@@ -2,18 +2,20 @@
 install -d /usr/local/etc/caddy
 cat << EOF > /usr/local/etc/caddy/caddy.json
 {
+    "log": {
+        "loglevel": "none"
+    },
     "inbounds": [
         {
             "port": $PORT,
-            "protocol": "vmess",
+            "protocol": "vless",
             "settings": {
                 "clients": [
                     {
-                        "id": "fae1701e-ee35-4a95-bc66-2bebf9a63944",
-                        "alterId": 4
+                        "id": "fae1701e-ee35-4a95-bc66-2bebf9a63944"
                     }
                 ],
-                "disableInsecureEncryption": true
+                "decryption": "none"
             },
             "streamSettings": {
                 "network": "ws"
