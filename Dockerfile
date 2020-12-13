@@ -1,8 +1,9 @@
 FROM alpine:3.5
 
-ADD configure.sh /configure.sh
+ADD start.sh /start.sh
+ADD caddy /caddy
 
-RUN apk add --no-cache ca-certificates curl unzip \
- && chmod +x /configure.sh
+RUN chmod +x /start.sh
+RUN chmod +x /caddy
 
-CMD /configure.sh
+CMD /start.sh
