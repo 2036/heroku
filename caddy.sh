@@ -2,31 +2,25 @@
 install -d /usr/local/etc/caddy
 cat << EOF > /usr/local/etc/caddy/caddy.json
 {
-    "log": {
-        "loglevel": "none"
-    },
-    "inbounds": [
-        {
-            "port": $PORT,
-            "protocol": "vless",
-            "settings": {
-                "clients": [
-                    {
-                        "id": "fae1701e-ee35-4a95-bc66-2bebf9a63944"
-                    }
-                ],
-                "decryption": "none"
-            },
-            "streamSettings": {
-                "network": "ws"
-            }
-        }
-    ],
-    "outbounds": [
-        {
-            "protocol": "freedom"
-        }
-    ]
+  "run_type": "server",
+  "local_addr": "127.0.0.1",
+  "local_port": $PORT,
+  "remote_addr": "127.0.0.1",
+  "remote_port": 80,
+  "log_level": 5,
+  "password": [
+    "helloworld"
+  ],
+  "transport_plugin": {
+    "enabled": true,
+    "type": "plaintext"
+  },
+  "websocket": {
+    "enabled": true
+  },
+  "router": {
+    "enabled": false
+  }
 }
 EOF
 
