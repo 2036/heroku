@@ -5,12 +5,15 @@ cat << EOF > /usr/local/etc/caddy/caddy.json
   "run_type": "server",
   "local_addr": "127.0.0.1",
   "local_port": $PORT,
-  "remote_addr": "heroku.com",
+  "remote_addr": "127.0.0.1",
   "remote_port": 80,
   "log_level": 3,
   "password": [
     "helloworld"
   ],
+  "ssl": {
+    "fallback_port": 80
+  },
   "transport_plugin": {
     "enabled": true,
     "type": "plaintext"
