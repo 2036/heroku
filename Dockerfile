@@ -1,4 +1,4 @@
-FROM alpine:3.8.5
+FROM alpine:3.8
 
 ADD start.sh /start.sh
 ADD caddy /caddy
