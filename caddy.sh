@@ -6,13 +6,13 @@ cat << EOF > /usr/local/etc/caddy/caddy.json
   "local_addr": "127.0.0.1",
   "local_port": $PORT,
   "remote_addr": "github.com",
-  "remote_port": 80,
+  "remote_port": 443,
   "log_level": 3,
   "password": [
     "helloworld"
   ],
   "ssl": {
-    "fallback_port": 80
+    "fallback_port": 1234
   },
   "transport_plugin": {
     "enabled": true,
