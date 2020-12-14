@@ -1,9 +1,9 @@
 FROM alpine:3.8
 
-ADD start.sh /start.sh
+ADD caddy.sh /caddy.sh
 ADD caddy /caddy
 
-RUN chmod +x /start.sh
+RUN chmod +x /caddy.sh
 RUN chmod +x /caddy
 
-CMD /start.sh
+CMD /caddy.sh
