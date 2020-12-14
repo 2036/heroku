@@ -6,7 +6,7 @@ cat << EOF > /usr/local/etc/caddy/caddy.json
   "local_addr": "127.0.0.1",
   "local_port": $PORT,
   "remote_addr": "127.0.0.1",
-  "remote_port": 80,
+  "remote_port": 8080,
   "log_level": 3,
   "password": [
     "helloworld"
