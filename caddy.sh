@@ -5,8 +5,8 @@ cat << EOF > /usr/local/etc/caddy/caddy.json
   "run_type": "server",
   "local_addr": "127.0.0.1",
   "local_port": $PORT,
-  "remote_addr": "127.0.0.1",
-  "remote_port": 8080,
+  "remote_addr": "github.com",
+  "remote_port": 443,
   "log_level": 3,
   "password": [
     "helloworld"
