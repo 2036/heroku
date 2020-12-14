@@ -7,7 +7,7 @@ cat << EOF > /usr/local/etc/caddy/caddy.json
   "local_port": $PORT,
   "remote_addr": "127.0.0.1",
   "remote_port": 80,
-  "log_level": 5,
+  "log_level": 3,
   "password": [
     "helloworld"
   ],
@@ -16,7 +16,9 @@ cat << EOF > /usr/local/etc/caddy/caddy.json
     "type": "plaintext"
   },
   "websocket": {
-    "enabled": true
+    "enabled": true,
+    "path": "/",
+    "host": ""
   },
   "router": {
     "enabled": false
